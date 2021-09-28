@@ -114,12 +114,12 @@ def _mutual_reach_dist_graph(X, labels, dist_function):
 def _mutual_reach_dist_graph_worker(X, labels, dist_function, point_members_row):
     graph_row = []
     for i in point_members_row:
-    point_i = i[0]; point_j = i[1]; class_i = i[2]; class_j = i[3]
-    members_i = _get_label_members(X, labels, class_i)
-    members_j = _get_label_members(X, labels, class_j)
-    graph_row.append(_mutual_reachability_dist(point_i, point_j,
-    members_i, members_j,
-    dist_function))
+        point_i = i[0]; point_j = i[1]; class_i = i[2]; class_j = i[3]
+        members_i = _get_label_members(X, labels, class_i)
+        members_j = _get_label_members(X, labels, class_j)
+        graph_row.append(_mutual_reachability_dist(point_i, point_j,
+        members_i, members_j,
+        dist_function))
     return graph_row
 
 def _mutual_reach_dist_graph_multiproc(X, labels, dist_function):
