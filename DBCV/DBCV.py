@@ -237,18 +237,7 @@ def _clustering_validity_index_multiproc(MST, labels):
 
 """
 def _clustering_validity_index(MST, labels):
-    """
-    Computes the validity of all clustering assignments for a
-    clustering algorithm
 
-    Args:
-        MST (np.ndarray): minimum spanning tree of all pair-wise
-            mutual reachability distances between points.
-        labels (np.array): clustering assignments for data X
-
-    Returns: validity_index (float):
-        score in range[-1, 1] indicating validity of clustering assignments
-    """
 
     n_samples = len(labels)
     validity_index = 0
